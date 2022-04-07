@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int snt;
+	char snt;
 	snt = "with proper grammar, but the outcome is a piece of art,";
 	printf("%s\n",snt);
 	return (0);
