@@ -7,21 +7,11 @@
  */
 int main(void)
 {
-	char h;
-	int i;
-	long int j;
-	long long int k;
-	float l;
-	h = 'H';
-	i = 8;
-	j = 8;
-	k = 8;
-	l = 3.14;
-	printf("Size of an int: %d byte(s)", sizeof(h));
-	printf("Size of an int: %d byte(s)", sizeof(i));
-	printf("Size of an int: %d byte(s)", sizeof(j));
-	printf("Size of an int: %d byte(s)", sizeof(k));
-	printf("Size of an int: %d byte(s)", sizeof(l));
+	printf("Size of an int: %d byte(s)", sizeof(char));
+	printf("Size of an int: %d byte(s)", sizeof(int));
+	printf("Size of an int: %d byte(s)", sizeof(long int));
+	printf("Size of an int: %d byte(s)", sizeof(long long int));
+	printf("Size of an int: %d byte(s)", sizeof(float));
 	return (0);
 }
 
