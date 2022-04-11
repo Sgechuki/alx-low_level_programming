@@ -17,12 +17,12 @@ int main(void)
 			{
 				putchar(i);
 				putchar(n);
-				putchar(' ')
 			}
 			if ((i + n) < '89')
 			{
 				putchar(',');
 			}
+			putchar(' ');
 		}
 	}
 	putchar('\n');
