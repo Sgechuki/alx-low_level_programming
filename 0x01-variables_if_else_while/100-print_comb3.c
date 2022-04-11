@@ -18,7 +18,7 @@ int main(void)
 				putchar(i);
 				putchar(n);
 			}
-			if ((i + n) < '89')
+			if ((i + n) < 89)
 			{
 				putchar(',');
 			}
