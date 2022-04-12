@@ -17,5 +17,5 @@ _putchar(ch);
 }
 i++;
 }
-_putchar('\n')
+_putchar('\n');
 }
