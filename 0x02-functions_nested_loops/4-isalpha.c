@@ -11,9 +11,10 @@ if (c >= 'a' && c <= 'z')
 {
 	result = 1;
 }
-if else ( c >= 'A' && c <= 'Z')
+else if ( c >= 'A' && c <= 'Z')
 {
 	result = 1;
+}
 else
 {
 	result = 0;
