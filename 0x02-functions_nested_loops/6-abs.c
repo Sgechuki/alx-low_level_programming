@@ -9,11 +9,11 @@ int _abs(int n)
 int result;
 if ( n >= 0)
 {
-	result(n);
+	result = n;
 }
 else if (n <= 0)
 {
-	result(-n);
+	result = -n;
 }
 return (result);
 }
