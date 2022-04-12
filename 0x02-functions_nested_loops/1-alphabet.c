@@ -1,18 +1,8 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - Entry point
- * Description - Program that prints "_putchar"
- * Return: Always 0 (Success)
+ * function that prints the alphabet, in lowercase, followed by a new line
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
-/* function that prints the alphabet, in lowercase, followed by a new line*/
 void print_alphabet(void)
 {
 	char ch;
