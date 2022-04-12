@@ -6,12 +6,14 @@
  */
 int _abs(int n)
 {
+int result;
 if ( n >= 0)
 {
-	return(n);
+	result(n);
 }
 else if (n <= 0)
 {
-	return(-n);
+	result(-n);
 }
+return (result);
 }
