@@ -12,20 +12,17 @@ for (i = 0; i <= 9; i++)
 for (x = 0; x <= 9; x++)
 {
 int result;
+
 result = ( i * x );
-if (x == 9)
+if (result <= 9)
 {
-_putchar('0' + (result / 10));
-_putchar('\n');
+_putchar(result + '0');
 }
-else
+else if (result >= 10)
 {
-_putchar('0' + (result / 10));
-_putchar(',');
-_putchar(' ');
+_putchar((result / 10) + '0');
+_putchar((result % 10) + '10);
 }
-}
-}
-}
+
 
 
