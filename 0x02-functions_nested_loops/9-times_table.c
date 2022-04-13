@@ -15,12 +15,12 @@ int result;
 result = ( i * x );
 if (x == 9)
 {
-_putchar('0' + result);
+_putchar('0' + (result / 10));
 _putchar('\n');
 }
 else
 {
-_putchar('0' + result);
+_putchar('0' + (result / 10));
 _putchar(',');
 _putchar(' ');
 }
