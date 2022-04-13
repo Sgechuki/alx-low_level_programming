@@ -13,7 +13,7 @@ for (x = 0; x <= 9; x++)
 {
 int result;
 result = ( i * x );
-if ((result % 9) == 0)
+if (x == 9);
 {
 _putchar(result + '0');
 _putchar('\n');
