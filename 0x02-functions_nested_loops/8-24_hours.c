@@ -14,7 +14,7 @@ for (x = 0; x <= 59; x++)
 {
 _putchar((i / 10) + '0');
 _putchar((i % 10) + '0');
--putchar(':');
+_putchar(':');
 _putchar((x / 10) + '0');
 _putchar((x % 10) + '0');
 _putchar('\n');
