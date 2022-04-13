@@ -21,7 +21,8 @@ _putchar('\n');
 else
 {
 _putchar(result + '0');
-_putchar(', ');
+_putchar(',');
+_putchar(' ');
 }
 }
 }
