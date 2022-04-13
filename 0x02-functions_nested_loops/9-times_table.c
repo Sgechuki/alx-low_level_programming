@@ -13,10 +13,16 @@ for (x = 0; x <= 9; x++)
 {
 int result;
 result = ( i * x );
-
+if ((result % 9) == 0)
+{
 _putchar(result + '0');
-_putchar(',');
-_putchar(' ');
+_putchar('\n');
+}
+else
+{
+_putchar(result + '0');
+_putchar(', ');
+}
 }
 }
 }
