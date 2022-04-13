@@ -14,7 +14,7 @@ for (x = 0; x <= 9; x++)
 int result;
 result = ( i * x );
 
-_putchar(result);
+_putchar(result + '0');
 _putchar(',');
 _putchar(' ');
 }
