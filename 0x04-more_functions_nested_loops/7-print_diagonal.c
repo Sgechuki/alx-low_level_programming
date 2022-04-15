@@ -13,13 +13,17 @@ _putchar('\n');
 }
 else
 {
-int i = 1;
+int i, j;
 
-while (i < (n - 1))
+for (i = 0; i < n; i++)
 {
-_putchar(' ');
-i++;
+for (j = 0; j < i; j++)
+{
+puthar(' ');
 }
-_putchar('\');
+_putchar('\\');
 _putchar('\n');
+}
+}
+}
 
