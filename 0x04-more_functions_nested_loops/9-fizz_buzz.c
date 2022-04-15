@@ -28,7 +28,7 @@ printf(' ');
 }
 else
 {
-printf("%d ", i);
+printf("%d", i);
 printf(' ');
 }
 }
