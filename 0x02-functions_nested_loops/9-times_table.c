@@ -14,27 +14,31 @@ for (i = 0; i <= 9; i++)
 	int result;
 
 	result = ( i * x );
-		if (result <= 9)
+		if (result <= 9 && x != 9) 
 		{
 		_putchar(result + '0');
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
 		}
-		else if (result >= 10)
+		else if (result <= 9 && x == 9)
+		{
+		_putchar(result + '0');
+		_putchar('\n');
+		}
+		else if (result >= 10 && x != 9)
 		{
 		_putchar((result / 10) + '0');
 		_putchar((result % 10) + '0');
-		}
-		if (x != 9)
-		{
 		_putchar(',');
-		_putchar(' ');
+		_putchar(' ')
 		}
-		else
+		else if (result >= 10 && x == 9)
 		{
+		_putchar((result / 10) + '0');
+                _putchar((result % 10) + '0');
 		_putchar('\n');
 		}
 	}
 }
 }
-
-
-
