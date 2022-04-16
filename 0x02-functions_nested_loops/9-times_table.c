@@ -14,7 +14,7 @@ for (x = 0; x <= 9; x++)
 int result;
 
 result = (i * x);
-if (result <= 9 && x != 0) 
+if (result <= 9 && x != 0)
 {
 _putchar(',');
 _putchar(' ');
