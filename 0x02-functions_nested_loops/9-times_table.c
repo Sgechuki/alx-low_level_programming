@@ -31,7 +31,7 @@ for (i = 0; i <= 9; i++)
 		_putchar((result / 10) + '0');
 		_putchar((result % 10) + '0');
 		_putchar(',');
-		_putchar(' ')
+		_putchar(' ');
 		}
 		else if (result >= 10 && x == 9)
 		{
