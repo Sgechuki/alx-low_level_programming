@@ -11,9 +11,9 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (n = ''; n <= '9'; n++)
+		for (n = '1'; n <= '9'; n++)
 		{
-			if (i != n && i < n && i != '9')
+			if ((i != n && i < n) && (i != '0' && n != '1'))
 			{
 				putchar(',');
 				putchar(' ');
