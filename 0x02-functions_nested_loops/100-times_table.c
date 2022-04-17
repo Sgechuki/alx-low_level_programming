@@ -26,13 +26,13 @@ rst = (i * j);
 	_putchar(' ');
 	_putchar(' ');
 	}
-	else if (j != 0 && (rst > 9 && rst <= 99)
+	else if (j != 0 && (rst > 9 && rst <= 99))
 	{
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
 	}
-	else if (j != 0 && (rst > 99)
+	else if (j != 0 && rst > 99)
 	{
 	_putchar(',');
 	_putchar(' ');
