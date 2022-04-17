@@ -25,7 +25,7 @@ if (k != 0 && l != 0)
 	putchar(k);
 	putchar(l);
 }
-if (k != '0' && l l= '0' && l != '9' && j != '8')
+if (k != '0' && l != '0' && l != '9' && j != '8')
 {
 	putchar(',');
 	putchar(' ');
