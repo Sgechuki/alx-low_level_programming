@@ -22,31 +22,22 @@ for (j = 0; j <= n; j++)
 rst = (i * j);
 	if (j != 0 && rst <= 9)
 	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(' ');
-	printf("%d", rst);
+	printf(",   %d", rst);
 	}
 	else if (j != 0 && (rst > 9 && rst <= 99))
 	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	printf("%d", rst);
+	printf(",  %d", rst);
 	}
 	else if (j != 0 && rst > 99)
 	{
-	_putchar(',');
-	_putchar(' ');
-	printf("%d", rst);
+	printf(", %d", rst);
 	}
-	else
+	else (j == 0)
 	{
 	printf("%d", rst);
 	}
 }
-_putchar('\n');
+printf('\n');
 }
 }
 }
