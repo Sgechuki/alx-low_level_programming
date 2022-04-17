@@ -21,36 +21,17 @@ for (j = 0; j <= n; j++)
 rst = (i * j);
 	if (j != 0 && rst <= 9)
 	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(' ');
+	printf(",   ");
 	}
 	else if (j != 0 && (rst > 9 && rst <= 99))
 	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
+	printf(",  ");
 	}
 	else if (j != 0 && rst > 99)
 	{
-	_putchar(',');
-	_putchar(' ');
+	printf(", ");
 	}
-	if (rst < 10)
-	{
-	_putchar(rst + '0');
-	}
-	else if (rst >= 10 && rst < 100)
-	{
-	_putchar((rst / 10) + '0');
-	_putchar((rst % 10) + '0');
-	}
-	else if (rst >= 100)
-	{
-	_putchar((rst / 100) + '0');
-	_putchar(((rst / 10)) % 10 + '0');
-	}
+	printf("%d", rst);
 }
 _putchar('\n');
 }
