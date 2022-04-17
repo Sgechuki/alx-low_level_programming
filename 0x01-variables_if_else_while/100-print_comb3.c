@@ -11,22 +11,20 @@ int main(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (n = '1'; n <= '9'; n++)
+		for (n = ''; n <= '9'; n++)
 		{
-			if (i != n && i < n && i != '8' && n != '9')
+			if (i != n && i < n && i != '9')
 			{
-				putchar(i);
-				putchar(n);
 				putchar(',');
 				putchar(' ');
 			}
-			else
+			if (i != n && i < n)
 			{
 				putchar(i);
 				putchar(n);
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
