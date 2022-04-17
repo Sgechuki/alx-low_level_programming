@@ -15,13 +15,13 @@ for (i = '0'; i <= '7'; i++)
 	{
 		for (k = '2'; k <= '9'; k++)
 		{
-		if ( i < j && j < k)
+		if (i < j && j < k)
 		{
 		putchar(i);
 		putchar(j);
 		putchar(k);
 		}
-		if ( i < j && j < k && i != '7')
+		if (i < j && j < k && i != '7')
 		{
 		putchar(',');
 		putchar(' ');
