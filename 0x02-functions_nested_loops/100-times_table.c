@@ -32,12 +32,12 @@ rst = (i * j);
 	{
 	printf(", %d", rst);
 	}
-	else (j == 0)
+	else if (j == 0)
 	{
 	printf("%d", rst);
 	}
 }
-printf('\n');
+printf("\n");
 }
 }
 }
