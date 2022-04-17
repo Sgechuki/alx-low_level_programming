@@ -48,9 +48,8 @@ rst = (i * j);
 	}
 	else if (rst >= 100)
 	{
-	_putchar(((rst / 10) / 10 ) + '0');
-	_putchar((rst / 10) + '0');
-	_putchar((rst % 10) + '0');
+	_putchar(((rst / 100 + '0');
+	_putchar(((rst / 10) % 10) + '0');
 	}
 }
 _putchar('\n');
