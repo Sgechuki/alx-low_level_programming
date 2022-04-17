@@ -27,4 +27,5 @@ for (i = 1; i < 1024;)
 	}
 }
 printf("%d\n", sum);
+return (0);
 }
