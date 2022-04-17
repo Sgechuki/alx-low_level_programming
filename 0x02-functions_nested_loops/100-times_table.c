@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -22,17 +21,36 @@ for (j = 0; j <= n; j++)
 rst = (i * j);
 	if (j != 0 && rst <= 9)
 	{
-	printf(",   ");
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
 	}
 	else if (j != 0 && (rst > 9 && rst <= 99))
 	{
-	printf(",  ");
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
 	}
 	else if (j != 0 && rst > 99)
 	{
-	printf(", ");
+	_putchar(',');
+	_putchar(' ');
 	}
-	printf("%d", rst);
+	if (rst < 10)
+	{
+	_putchar(rst + '0');
+	}
+	else if (rst >= 10 && rst < 100)
+	{
+	_putchar((rst / 10) + '0');
+	_putchar((rst % 10) + '0');
+	}
+	else if (rst >= 100)
+	{
+	_putchar((rst / 100) + '0');
+	_putchar(((rst / 10)) % 10 + '0');
+	}
 }
 _putchar('\n');
 }
