@@ -13,15 +13,17 @@ int main(void)
 	{
 		for (n = '1'; n <= '9'; n++)
 		{
-			if (i != n && i < n)
+			if (i != n && i < n && i != '8' && n != '9')
 			{
 				putchar(i);
 				putchar(n);
-			}
-			if (i != '8' && n != '9')
-			{
 				putchar(',');
 				putchar(' ');
+			}
+			else
+			{
+				putchar(i);
+				putchar(n);
 			}
 		}
 	}
