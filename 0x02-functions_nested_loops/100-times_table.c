@@ -7,7 +7,7 @@
  */
 void print_times_table(int n)
 {
-if (n <= 0 || n > 15)
+if (n < 0 || n > 15)
 {
 }
 else
@@ -19,13 +19,20 @@ for (i = 0; i <= n; i++)
 for (j = 0; j <= n; j++)
 {
 rst = (i * j);
-	if ( j != 0 && rst <= 9)
+	if (j != 0 && rst <= 9)
+	{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+	}
+	else if (j != 0 && (rst > 9 && rst <= 99)
 	{
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
 	}
-	else if (j != 0 && rst > 9)
+	else if (j != 0 && (rst > 99)
 	{
 	_putchar(',');
 	_putchar(' ');
@@ -34,8 +41,14 @@ rst = (i * j);
 	{
 	_putchar(rst + '0');
 	}
-	else if (rst >= 10)
+	else if (rst >= 10 && rst < 100)
 	{
+	_putchar((rst / 10) + '0');
+	_putchar((rst % 10) + '0');
+	}
+	else if (rst >= 100)
+	{
+	_putchar((rst / 100) + '0');
 	_putchar((rst / 10) + '0');
 	_putchar((rst % 10) + '0');
 	}
