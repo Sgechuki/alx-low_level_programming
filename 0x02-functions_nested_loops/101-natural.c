@@ -8,11 +8,11 @@
 
 int main(void)
 {
-int i;
+int i = 0;
 
 int sum = 0;
 
-for (i = 1; i < 1024;)
+for (i < 1024)
 {
 	if (i % 3 == 0 && i % 5 == 0)
 	{
