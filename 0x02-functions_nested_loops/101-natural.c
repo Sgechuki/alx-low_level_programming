@@ -27,6 +27,6 @@ for (i = 1; i < 1024;)
 	sum = sum + i;
 	}
 }
-printf("%d\n", sum);
+printf("%ld\n", sum);
 return (0);
 }
