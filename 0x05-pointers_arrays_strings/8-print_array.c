@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -17,6 +18,8 @@ if ( i != (n - 1))
 printf("%d, ", *(a + i));
 }
 else
-}
+{
 printf("%d\n", *(a + i));
+}
+}
 }
