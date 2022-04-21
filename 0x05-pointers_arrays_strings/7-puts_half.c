@@ -24,7 +24,7 @@ _putchar(*(str + i));
 }
 else
 {
-for (j = (cnt - 1) / 2; *(str + j) != '\0'; j++)
+for (j = ((cnt - 1) / 2) + 1 ; *(str + j) != '\0'; j++)
 {
 _putchar(*(str + j));
 }
