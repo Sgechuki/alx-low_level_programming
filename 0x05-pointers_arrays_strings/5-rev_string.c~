@@ -11,10 +11,12 @@ int cnt, i;
 
 for (cnt = 0; s[cnt]; cnt++)
 {
+_putchar(s[cnt]);
 }
-for (i = cnt - 1; s[i]; i--)
+_putchar('\n');
+for (i = cnt - 1; s[cnt]; i--)
 {
-_putchar(s[i]);
+_putchar(s[cnt]);
 }
 _putchar('\n');
 }
