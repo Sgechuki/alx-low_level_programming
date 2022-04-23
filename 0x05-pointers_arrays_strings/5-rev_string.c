@@ -14,7 +14,7 @@ char temp;
 for (cnt = 0; *(s + cnt) != '\0'; cnt++)
 {
 }
-for (i = cnt - 1; i >= 0; i--)
+for (i = (cnt - 1); i >= 0; i--)
 {
 if (i != cnt2)
 {
