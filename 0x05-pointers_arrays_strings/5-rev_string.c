@@ -14,18 +14,10 @@ char temp;
 for (cnt = 0; *(s + cnt) != '\0'; cnt++)
 {
 }
-for (i = (cnt - 1); i >= 0; i--)
+for (i = 0; i < (cnt / 2); i++)
 {
-if (i != cnt2)
-{
-temp = *(s + cnt2);
-*(s + cnt2) = *(s + i);
-*(s + i) = temp;
-cnt2++;
-}
-else if (i == cnt2)
-{
-cnt2++;
-}
+temp = s[i];
+s[i] = s[cnt - i - 1];
+s[cnt - i - 1] = temp;
 }
 }
