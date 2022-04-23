@@ -12,7 +12,7 @@ int cnt, i;
 for (cnt = 0; *(s + cnt) != '\0'; cnt++)
 {
 }
-for (i = (cnt - 1); i >= 0; i--)
+for (i = 0; i < cnt; i++)
 {
 _putchar(*(s + i));
 }
