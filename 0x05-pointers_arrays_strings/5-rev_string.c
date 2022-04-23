@@ -7,18 +7,24 @@
  */
 void rev_string(char *s)
 {
-int cnt, i,cnt2 = 0;
+int cnt, i, cnt2 = 0;
+char temp;
 
 for (cnt = 0; *(s + cnt) != '\0'; cnt++)
 {
 }
-char temp[cnt + 1];
-
 for (i = cnt - 1; i >= 0; i--)
 {
-temp[cnt2] = _putchar(*(s + i));
+if (i != cnt2)
+{
+temp = *s[cnt2];
+*s[cnt2] = *s[i];
+*s[i] = temp;
 cnt2++;
 }
-temp[cnt2 + 1] = '\0';
-s* = *temp;
+else if (i == cnt2)
+{
+cnt2++;
+}
+}
 }
