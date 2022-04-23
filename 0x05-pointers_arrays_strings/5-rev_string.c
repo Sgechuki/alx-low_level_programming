@@ -17,9 +17,9 @@ for (i = cnt - 1; i >= 0; i--)
 {
 if (i != cnt2)
 {
-temp = *s[cnt2];
-*s[cnt2] = *s[i];
-*s[i] = temp;
+temp = s[cnt2];
+s[cnt2] = s[i];
+s[i] = temp;
 cnt2++;
 }
 else if (i == cnt2)
