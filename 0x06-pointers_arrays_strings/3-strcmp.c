@@ -1,22 +1,19 @@
 #include "main.h"
 /**
- * _strcmp - compares two strings
+ * _strcmp - compares two strings lexicographically
  * @s1: a string
  * @s2: a string
- * Return: Always return integer of their difference
+ * Return: Always 0 if equal or difference
  */
 
 int _strcmp(char *s1, char *s2)
 {
-int i, j;
+int i, j = 0;
 
-for (i = 0; *(s1 + i) != '\0';)
+for (i = 0; *(s1 + i) != '\0' && j == 0;)
 {
-i = i + s1[i];
+j = s1[i] - s2[i];	
+i++;
 }
-for (j = 0; *(s2 + j) != '\0';)
-{
-j = j + s2[j];
-}
-return (i - j);
+return (j);
 }
