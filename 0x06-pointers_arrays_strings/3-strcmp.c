@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strcmp - compares two strings lexicographically
+ * _strcmp - compares two strings
  * @s1: a string
  * @s2: a string
- * Return: Always 0 if equal or difference
+ * Return: Always integer of their difference
  */
 
 int _strcmp(char *s1, char *s2)
