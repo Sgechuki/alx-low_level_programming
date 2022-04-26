@@ -16,11 +16,13 @@ for (;s[i] != '\0'; i++)
 {
 	if (s[i] == c)
 	{
-		return (s + i);
+		s = (s + i);
+		return (s)
 	}
-	else if (s[i + 1] == '\0')
+}
+	if (s[i] == '\0')
 	{
 		return (NULL);
 	}
 }
-}
+
