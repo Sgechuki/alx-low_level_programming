@@ -18,6 +18,7 @@ while (s[i] != '\0')
 if (s[i] == c)
 {
 p = s + i;
+break;
 }
 i++;
 }
