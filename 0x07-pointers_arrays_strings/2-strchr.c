@@ -9,22 +9,18 @@
 char *_strchr(char *s, char c)
 {
 int i;
-int j;
 
-for (j = 0; s[j] != '\0'; j++)
-{
-}
 i = 0;
-while (s[i] != '\0')
-{
-if (s[i] == c)
-{
-return (s + i);
-}
-i++;
-}
-if (i == j)
-{
-return("");
-}
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			return (s + i);
+		}
+	i++;
+	}
+	if (s[i] == '\0')
+	{
+		return (NULL);
+	}
 }
