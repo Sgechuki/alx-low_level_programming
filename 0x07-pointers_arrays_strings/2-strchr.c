@@ -25,6 +25,6 @@ i++;
 }
 if (i == j)
 {
-return (NULL);
+return("");
 }
 }
