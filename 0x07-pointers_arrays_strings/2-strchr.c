@@ -13,7 +13,7 @@ char *p = NULL;
 
 while (s[i] != '\0')
 {
-if (s[i] = c)
+if (s[i] == c)
 {
 p = (s + i);
 break;
