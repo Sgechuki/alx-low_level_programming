@@ -20,6 +20,8 @@ while (s[i])
 	}
 	i++;
 }
-return (NULL);
+if (s[i] == '\0')
+{
+	return (NULL);
 }
-
+}
