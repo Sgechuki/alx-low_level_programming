@@ -19,10 +19,7 @@ while (s[i])
 	{
 		return (s + i);
 	}
-	if (s[i + 1] == 0)
-	{
-		return (NULL);
-	}
 	i++;
 }
+return (0);
 }
