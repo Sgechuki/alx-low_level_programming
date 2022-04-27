@@ -22,7 +22,7 @@ i++;
 }
 if (s[i] == c)
 {
-return (s + 1);
+return(s + i);
 }
 return (0);
 }
