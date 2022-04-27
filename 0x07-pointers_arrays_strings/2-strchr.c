@@ -24,5 +24,5 @@ if (s[i] == c)
 {
 return (s + 1);
 }
-return ('\0');
+return (0);
 }
