@@ -21,10 +21,11 @@ void print_diagsums(int *a, int size)
 			if (i == j)
 			{
 				d1 = d1 + a[i][j];
+				break;
 			}
 		}
 	}
-n = size;
+	n = size;
 	for (k = 0; k < size; i++)
 	{
 		for (l = (size - 1); l >= 0; j--)
@@ -33,6 +34,7 @@ n = size;
 			if (l == n)
 			{
 				d2 = d2 + a[k][l];
+				break;
 			}
 		}
 	}
