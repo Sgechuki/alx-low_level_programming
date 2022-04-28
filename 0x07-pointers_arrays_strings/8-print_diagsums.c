@@ -19,7 +19,7 @@ for (j = 0; j < size; j++)
 {
 if (i == j)
 {
-d1 += a[i][j];
+d1 = d1 + a[i][j];
 }
 }
 }
@@ -31,7 +31,7 @@ for (l = (size - 1); l >= 0; j--)
 n = n - 1;
 if (l == n)
 {
-d2 += a[k][l];
+d2 = d2 + a[k][l];
 }
 }
 }
