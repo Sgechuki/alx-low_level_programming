@@ -2,25 +2,38 @@
 
 /**
  * print_diagsums - print sum a square's two diagonals
- * @a:
- * @size
+ * @a: square matrix to sum diagonals
+ * @size: size of square matrix
  * Return: always void
  */
 void print_diagsums(int *a, int size)
 {
-int i, j, k, l;
+int i, j, k, l, n;
+int d1, d2;
 
+d1 = 0;
+d2 = 0;
 for (i = 0; i < size; i++)
 {
 for (j = 0; j < size; j++)
 {
 if (i == j)
 {
-sum1 = a[i][j];
+d1 += a[i][j];
 }
 }
 }
-for (i = 0; i < size; i++)
+n = size;
+for (k = 0; k < size; i++)
 {
-for (j = 0; j < size; j++)
- 
+for (l = (size - 1); l >= 0; j--)
+{
+n = n - 1;
+if (l == n)
+{
+d2 += a[k][l];
+}
+}
+}
+printf("%d, %d\n", d1, d2);
+}
