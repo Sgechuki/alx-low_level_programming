@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,32 +9,32 @@
  */
 void print_diagsums(int *a, int size)
 {
-int i, j, k, l, n;
-int d1, d2;
+	int i, j, k, l, n;
+	int d1, d2;
 
-d1 = 0;
-d2 = 0;
-for (i = 0; i < size; i++)
-{
-for (j = 0; j < size; j++)
-{
-if (i == j)
-{
-d1 = d1 + a[i][j];
-}
-}
-}
+	d1 = 0;
+	d2 = 0;
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
+		{
+			if (i == j)
+			{
+				d1 = d1 + a[i][j];
+			}
+		}
+	}
 n = size;
-for (k = 0; k < size; i++)
-{
-for (l = (size - 1); l >= 0; j--)
-{
-n = n - 1;
-if (l == n)
-{
-d2 = d2 + a[k][l];
-}
-}
-}
-printf("%d, %d\n", d1, d2);
+	for (k = 0; k < size; i++)
+	{
+		for (l = (size - 1); l >= 0; j--)
+		{
+			n = n - 1;
+			if (l == n)
+			{
+				d2 = d2 + a[k][l];
+			}
+		}
+	}
+	printf("%d, %d\n", d1, d2);
 }
