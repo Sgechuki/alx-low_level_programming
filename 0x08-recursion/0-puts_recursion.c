@@ -3,7 +3,7 @@
 /**
  * _puts_recursion - prints a string, followed by new line
  * @s: array to print from
- * 
+ *
  */
 void _puts_recursion(char *s)
 {
