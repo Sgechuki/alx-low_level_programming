@@ -16,7 +16,7 @@ int _sqrt_recursion(int n)
 	{
 		return (1);
 	}
-	return (_sqrt_recursion_1(n, 2))
+	return (_sqrt_recursion_1(n, 2));
 }
 /**
  * _sqrt_recursion_1 - iterates to find square root of n
@@ -34,7 +34,7 @@ int _sqrt_recursion_1(int n, int i)
 	{
 		return (i);
 	}
-	else if
+	else
 	{
 		return (_sqrt_recursion_1(n, i + 1));
 	}
