@@ -25,6 +25,7 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
+	printf("%i, ", d1);
 	n = size;
 	for (k = 0; k < size; i++)
 	{
@@ -38,5 +39,5 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
-	printf("%d, %d\n", d1, d2);
+	printf("%i\n", d2);
 }
