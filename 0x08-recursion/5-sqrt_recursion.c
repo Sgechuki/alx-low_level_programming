@@ -9,19 +9,19 @@ int _sqrt_recursion(int n)
 {
 	int i;
 
-	i = 1;
-	if ((i * i) == n)
+	i = ;
+	if (n == 1)
 	{
-		return (i);
+		return (1);
 	}
-	if (n <= 0)
+	else if (n <= 0)
 	{
 		return (-1);
 	}
 	i = i + 1;
-	if (i == n)
+	if ((i * i) == n)
 	{
-		return (-1);
+		return (i);
 	}
-	return (_sqrt_recursion(n));
+	_sqrt_recursion(n);
 }
