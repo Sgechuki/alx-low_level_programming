@@ -14,11 +14,11 @@ void print_diagsums(int *a, int size)
 
 	d1 = 0;
 	d2 = 0;
-	j = (size - 1);
+	j = size;
 	for (i = 0; i < size; i++)
 	{
 		d1 = d1 + a[i][i];
-		d2 = d2 + a[i][j];
+		d2 = d2 + a[i][j - 1];
 		j--;
 	}
 }
