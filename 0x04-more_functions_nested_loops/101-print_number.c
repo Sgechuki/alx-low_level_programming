@@ -14,6 +14,10 @@ if (n < 0)
 _putchar('-');
 i = -1 * n;
 }
+else
+{
+i = n;
+}
 if (i / 10)
 {
 print_number(i / 10);
