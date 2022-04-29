@@ -11,8 +11,8 @@ int i;
 
 if (n < 0)
 {
+i = -n;
 _putchar('-');
-i = -1 * n;
 }
 else
 {
