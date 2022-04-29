@@ -31,3 +31,4 @@ int is_prime_number_1(int n, int i)
 		return (0);
 	}
 	return (is_prime_number_1(n, i + 1));
+}
