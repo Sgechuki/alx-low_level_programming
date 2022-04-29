@@ -9,12 +9,12 @@ int _sqrt_recursion(int n)
 {
 	int i;
 
-	i = ;
+	i = 1;
 	if (n == 1)
 	{
 		return (1);
 	}
-	else if (n <= 0)
+	if (n <= 0)
 	{
 		return (-1);
 	}
@@ -23,5 +23,8 @@ int _sqrt_recursion(int n)
 	{
 		return (i);
 	}
-	_sqrt_recursion(n);
+	if ((i * i) != n)
+	{
+		return (0 + _sqrt_recursion(n));
+	}
 }
