@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_diagsums - print sum of each square's diagonals
+ * print_diagsums - print sum of each diagonals
  * @a: square matrix to sum diagonals
  * @size: size of square matrix
  * 
