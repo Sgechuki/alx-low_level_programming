@@ -21,7 +21,7 @@ for (j = 0; s[j] != '\0'; j++)
 		count++;
 		break;
 	}
-	else if (accept[j + 1] == '\0')
+	else if (s[i] != accept[j] && accept[j + 1] == '\0')
 	{
 		return (count);
 	}
