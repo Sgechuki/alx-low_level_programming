@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strspn - gets the length of a prefix substring
- * @s:
- * @accept
- * Return:
+ * _strspn - gets the length of a prefix
+ * @s: array to find prefix string
+ * @accept: prefix string
+ * Return: Length of prefix
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -21,7 +21,7 @@ for (j = 0; s[j] != '\0'; j++)
 		count++;
 		break;
 	}
-	else if (s[i] != accept[j] && accept[j + 1] == '\0')
+	else if (accept[j + 1] == '\0')
 	{
 		return (count);
 	}
