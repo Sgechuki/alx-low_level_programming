@@ -29,7 +29,6 @@ char *_strstr(char *haystack, char *needle)
 			count++;
 			break;
 		}
-		}
 		else if (needle[j + 1] == '\0')
 		{
 			count = 0;
