@@ -27,7 +27,7 @@ int main(void)
 		}
 		else
 		{
-			print("%d" count);
+			printf("%d", count);
 		}
 	}
 }
