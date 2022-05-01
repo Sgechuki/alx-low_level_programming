@@ -2,8 +2,8 @@
 /**
  * _strstr - locates a substring
  * @haystack: string to be searched
- * @neddle: string to search
- * pointer to beginning of substring or NULL
+ * @needle: string to search
+ * Return: to beginning of substring or NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -22,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		if (length == count)
 		{
-			return (haystack[i - (size - 1)]);
+			return (haystack + i - (size - 1));
 		}
 		if (haystack[i] == needle[j])
 		{
@@ -35,5 +35,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	}
-	return (count);
+	return (0);
 }
