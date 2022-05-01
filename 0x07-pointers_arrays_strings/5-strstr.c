@@ -29,9 +29,14 @@ char *_strstr(char *haystack, char *needle)
 			count++;
 			break;
 		}
+		}
 		else if (needle[j + 1] == '\0')
 		{
 			count = 0;
+		}
+		else if (haystack[i + 1] == '\0' && needle[j + 1] == '\0')
+		{
+			return (0);
 		}
 	}
 	}
