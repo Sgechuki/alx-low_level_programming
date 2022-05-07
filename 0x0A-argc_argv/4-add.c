@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include "main.h"
 /**
  * main - adds positive numbers
  * @argc: number ofarguments
@@ -10,25 +10,27 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, j, sum;
 
 	if (argc < 2)
 	{
 		printf("%d\n", 0);
 	}
-	sum = 0;
-	for (i = 1; atoi(argv[i]) != '\0'; i++)
+	else
 	{
-		if (!isdigit(argv[i]))
+	for (i = 1; i < argc; i++)
+	{
+	for (j = 0; argv[i][j]; j++)
+	{
+		if (!isdigit(argv[i][j]))
 		{
 			printf("Error\n");
 			return (1);
 		}
-		else if (atoi(argv[i]) >= 0)
-		{
-			sum += atoi(argv[i]);
-		}
+	}
+	sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
+	}
 	return (0);
 }
