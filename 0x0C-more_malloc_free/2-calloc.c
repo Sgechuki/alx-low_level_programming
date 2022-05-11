@@ -18,7 +18,7 @@ unsigned int i;
 		return (0);
 	}
 	ptr = (char *) malloc(size * nmemb);
-	if (ptr== NULL)
+	if (ptr == NULL)
 	{
 		return (0);
 	}
