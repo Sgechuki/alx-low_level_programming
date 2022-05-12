@@ -1,11 +1,11 @@
 #include <stdio.h>
-#define NAME "2-main.c"
 /**
  * main - prints name of file it was complied from
  *
- * Return: Always void
+ * Return: 0 (Success)
  */
-void main(void)
+int main(void)
 {
-	printf("%s\n", NAME);
+	printf("%s\n", __FILE__);
+	return (0);
 }
