@@ -1,0 +1,43 @@
+#include "main.h"
+#include <stdio.h>
+int loop(char *s, int i);
+
+/**
+ * loop - loops through string to determine whether palindrome
+ * @s: string
+ * @i: counter
+ * Return: 1 if TRUE or 0 if FALSE
+ */
+
+int loop(char *s, int i)
+{
+	int j;
+
+	j = _strlen_recursion(s) - 1;
+	if (s[i] != s[j - i])
+	{
+		return (0);
+	}
+	else if (i == (j / 2) && s[i] == s[j - i])
+	{
+		return (1);
+	}
+	else
+	{
+		return (loop(s, i + 1));
+	}
+}
+/**
+ * is_palindrome - finds whether a string is a palindrome
+ * @s: string
+ * Return: 1 if true 0 if false
+ */
+
+int is_palindrome(char *s)
+{
+	if (*(s) == "")
+	{
+		return (1);
+	}
+	return (loop(s, 0));
+}
