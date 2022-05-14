@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 int loop(char *s, int i);
+int _strlen_recursion(char *s);
 
 /**
  * loop - loops through string to determine whether palindrome
@@ -40,4 +41,20 @@ int is_palindrome(char *s)
 		return (1);
 	}
 	return (loop(s, 0));
+}
+/**
+ * _strlen_recursion - returns length of string
+ * @s: char array to find its length
+ * Return: Length of string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + _strlen_recursion(s + 1));
+	}
 }
