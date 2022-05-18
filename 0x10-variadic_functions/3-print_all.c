@@ -4,7 +4,7 @@
 
 /**
  * print_all - prints anything
- * @format:
+ * @format: types of the variable arguements passed to function
  *
  */
 void print_all(const char * const format, ...)
