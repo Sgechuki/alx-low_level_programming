@@ -11,12 +11,15 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	char *ch;
+	char *sep = "";
 	va_list ap;
 
 	i = 0;
 	va_start(ap, format);
 	while (format && format[i])
 	{
+		printf("%s", sep);
+		sep = ", ";
 		switch (format[i])
 		{
 			case 'c':
@@ -38,10 +41,6 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		i++;
-		if (format[i])
-		{
-			printf(", ");
-		}
 	}
 	va_end(ap);
 	printf("\n");
