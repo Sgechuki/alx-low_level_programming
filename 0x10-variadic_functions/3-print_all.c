@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				{
 					ch = "(nil)";
 				}
-				printf("%s%s", sep,ch);
+				printf("%s%s", sep, ch);
 				break;
 		}
 		sep = ", ";
