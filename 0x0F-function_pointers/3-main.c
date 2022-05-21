@@ -6,12 +6,13 @@
  * main - Entry
  * @argc: number of arguments
  * @argv: arrays of arguments
- * Return:
+ * Return: 0 on success or exit on fail
  */
 int main(int argc, char *argv[])
 {
 	int num1, num2;
 	char *ch;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
