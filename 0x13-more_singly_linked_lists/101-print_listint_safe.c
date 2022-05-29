@@ -23,14 +23,20 @@ size_t print_listint_safe(const listint_t *head)
 	i = 0;
 	while (slow != NULL)
 	{
-	printf("[%p] %d\n", (void *) slow, slow->n);
-	fast = fast->next->next;
-	slow = slow->next;
-	i++;
-	if (strcmp(slow, fast) == 0)
-	{
-		break;
-	}
+		printf("[%p] %d\n", (void *) slow, slow->n);
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+		{
+			while (slow != fast)
+			{
+				printf("[%p] %d\n", (void *) slow, slow->n);
+				slow = slow->next;
+				i++;
+			}
+			return (i);
+		}
+		i++;
 	}
 	return (i);
 }
