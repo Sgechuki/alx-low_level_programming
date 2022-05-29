@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 	}
 	i = 0;
-	while (slow == NULL)
+	while (slow != NULL)
 	{
 		if (slow == fast)
 		{
