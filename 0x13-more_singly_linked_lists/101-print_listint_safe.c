@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * print_listint_safe - prints a listint_t linked list
@@ -26,7 +27,7 @@ size_t print_listint_safe(const listint_t *head)
 	fast = fast->next->next;
 	slow = slow->next;
 	i++;
-	if (slow == fast)
+	if (strcmp(slow, fast) == 0)
 	{
 		break;
 	}
