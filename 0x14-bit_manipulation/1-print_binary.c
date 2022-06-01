@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	while (n == 0)
+	while (n != 0)
 	{
 		printf("%ld", n & 1);
 		n = (n >> 1);
