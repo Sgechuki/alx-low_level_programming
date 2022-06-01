@@ -10,8 +10,8 @@ void print_binary(unsigned long int n)
 {
 	while (n != 0)
 	{
-		printf("%ld", n & 1);
+		_putchar((n & 1) + '0');
 		n = (n >> 1);
 	}
-	printf("\n");
+	_putchar('\n');
 }
