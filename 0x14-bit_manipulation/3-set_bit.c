@@ -10,17 +10,13 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	 unsigned int i;
+	 unsigned long int i;
 
 	if (index > 63)
 	{
 		return (-1);
 	}
-	for (i = 0; i <= index; i++)
-	{
-		*n = *n >> 1;
-	}
-	*n = *n | 1;
-	*n = *n << index;
+	i = 1 << index;
+	*n = *n | i;
 	return (1);
 }
