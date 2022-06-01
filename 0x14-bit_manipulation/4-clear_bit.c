@@ -17,7 +17,18 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	}
 
-	i = 1 << index;
-	*n = *n & i;
-	return (1);
+	for (i = 0; i <= index; i++)
+	{
+		if (i == index)
+		{
+			*n = *n & 0;
+			for ( ; i >= 1; i--)
+			{
+				*n = *n << 1;
+			}
+			return (1);
+		}
+		*n = *n >> 1;
+	}
+	return (-1);
 }
