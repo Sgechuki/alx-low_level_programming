@@ -7,7 +7,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, fwrite;
+	int fd, fwrite, i;
 
 	if (!filename)
 	{
@@ -18,9 +18,12 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	for (i = 0; text_content[i]; i++)
+	{
+	}
 	if (text_content)
 	{
-		fwrite = write(fd, text_content, strlen(text_content));
+		fwrite = write(fd, text_content, i);
 		if (fwrite == -1)
 		{
 			return (-1);
