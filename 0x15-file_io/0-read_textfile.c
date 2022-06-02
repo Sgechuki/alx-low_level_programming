@@ -8,8 +8,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t i, n;
+	ssize_t fd, i, n;
 	char *buf;
 
 	if (!filename)
@@ -22,22 +21,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 	{
 		return (0);
 	}
 	i = read(fd, buf, letters);
-	if (i < 0)
+	if (i == -1)
+	{
+		return (0);
+	}
+	n = write(STDIN_FILENO, buf, i);
+	if (n == -1)
 	{
 		return (0);
 	}
 	close(fd);
-	n = write(STDIN_FILENO, buf, i);
-	if (n < i)
-	{
-		free(buf);
-		return (0);
-	}
 	free(buf);
 	return (i);
 }
