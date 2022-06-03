@@ -23,17 +23,14 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fds = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fds == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
-		exit(99);
-	}
+	
 	while ((fread = read(fd, buf, 1024)) > 0)
 	{
 		fwrite = write(fds, buf, fread);
-		if (fwrite == -1 || fwrite < fread)
+		if (fds == -1 || fwrite != fread)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
+			close(fd);
 			exit(99);
 		}
 	}
@@ -52,5 +49,5 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't close %d\n", cfds);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
