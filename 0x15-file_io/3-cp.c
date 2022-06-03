@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		fwrite = write(fds, buf, fread);
 		if (fds == -1 || fwrite != fread)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fd);
 			exit(99);
 		}
@@ -44,9 +44,9 @@ int main(int argc, char *argv[])
 	if (cfd == -1 || cfds == -1)
 	{
 		if (cfd == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close %d\n", cfd);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfd);
 		else if (cfds == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close %d\n", cfds);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfds);
 		exit(100);
 	}
 	return (0);
