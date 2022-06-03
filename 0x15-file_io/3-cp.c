@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - program to implement cp command
  * @argc: number of arguments
@@ -29,7 +28,6 @@ int main(int argc, char *argv[])
 		if (fds == -1 || fwrite != fread)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(fd);
 			exit(99);
 		}
 	}
