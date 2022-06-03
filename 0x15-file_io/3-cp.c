@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fds = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	
 	while ((fread = read(fd, buf, 1024)) > 0)
 	{
 		fwrite = write(fds, buf, fread);
