@@ -7,27 +7,21 @@
 
 int main(void)
 {
-	int i, count;
+	int count = 2;
+	long int i = 1, j = 2, k;
 
-	count = 0;
-	for (i = 0; i < 50; i++)
+	printf("%ld, %ld ,", i, j);
+	for ( ; count < 51; count++)
 	{
-		count++;
-		if (count < 2)
+		k = i + j;
+		printf("%ld", k);
+		if (count < 50)
 		{
-			printf("%d, ", count);
+			printf(", ");
 		}
-		else if (count == 2)
-		{
-			printf("%d\n", count);
-		}
-		else if (count > 2 && i < 49)
-		{
-			printf("%d, ", ((count - 2) + (count -1)));
-		}
-		else
-		{
-			printf("%d", count);
-		}
+		i = j;
+		j = k;
 	}
+	printf("\n");
+	return (0);
 }
