@@ -10,9 +10,9 @@ int i, j;
 char str[] = "aAeEoOtTlL";
 char num[] = "4433007711";
 
-for (i = 0; s[i]; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
-	for (j = 0; str[j]; j++)
+	for (j = 0; str[j] != '\0'; j++)
 	{
 		if (s[i] == str[j])
 		{
