@@ -15,7 +15,7 @@ int main(void)
 	{
 		k = i + j;
 		printf("%ld", k);
-		if (count < 50)
+		if (count < 49)
 		{
 			printf(", ");
 		}
