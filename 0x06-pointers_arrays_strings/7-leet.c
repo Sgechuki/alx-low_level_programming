@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * leet - encodes a string into 1337
  * @s: string to be encoded
@@ -18,7 +19,7 @@ for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == str[j])
 		{
-			s[i] = num[i];
+			s[i] = num[j];
 			break;
 		}
 	}
