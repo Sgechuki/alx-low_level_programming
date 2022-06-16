@@ -8,19 +8,19 @@
 int main(void)
 {
 	int count = 2;
-	long int i = 1, j = 2, k;
+	long int i = 1, j = 2;
 
-	printf("%ld, %ld ,", i, j);
+	printf("%ld, ", i);
+	printf("%ld, ", j);
 	for ( ; count < 50; count++)
 	{
-		k = i + j;
-		printf("%ld", k);
+		j = i + j;
+		i = j - i;
+		printf("%ld", j);
 		if (count < 49)
 		{
 			printf(", ");
 		}
-		i = j;
-		j = k;
 	}
 	printf("\n");
 	return (0);
