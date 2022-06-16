@@ -16,7 +16,7 @@ for (i = 0; s[i]; i++)
 	{
 		if (s[i] == str[j])
 		{
-			*(s + i) = num[i];
+			s[i] = num[i];
 			break;
 		}
 	}
