@@ -9,8 +9,7 @@ int main(void)
 {
 	long int i = 1, j = 2, sum = 2;
 
-	
-	while (j <= 4000000)
+	while (j < 4000000)
 	{
 		j = i + j;
 		i = j - i;
@@ -19,6 +18,6 @@ int main(void)
 			sum += j;
 		}
 	}
-	printf("%ld\n", j);
+	printf("%ld\n", sum);
 	return (0);
 }
