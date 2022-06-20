@@ -12,12 +12,12 @@ int _atoi(char *s)
 
 	for (i = 0; s[i]; i++)
 	{
+		if (s[i] == '-')
+		{
+			sign *= -1;
+		}
 		while ((s[i] >= '0' && s[i] <= '9') && s[i])
 		{
-			if (i > 0 && s[i - 1] == '-')
-			{
-				sign *= -1;
-			}
 			if (plv == 0)
 			{
 				num = s[i] - '0';
