@@ -22,7 +22,7 @@ int _atoi(char *s)
 			skim = 1;
 			i++;
 		}
-		if (!skim)
+		if (skim)
 		{
 			num *= sign;
 			break;
