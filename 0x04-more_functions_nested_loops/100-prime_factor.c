@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 /**
  * main - entry point
@@ -9,18 +8,17 @@
  */
 int main(void)
 {
-	long int n, i;
+	long int n, i = 2;
 
 	n = 612852475143;
-	i = (int) sqrt(n);
-	while (2)
+	while (i * i < n)
 	{
-		if (n % i == 0)
+		while (n % i == 0)
 		{
-			printf("%ld\n", i);
-			break;
+			n = n / i;
 		}
-		i--;
+		i++;
 	}
+	printf("%ld\n", n);
 	return (0);
 }
