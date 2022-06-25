@@ -16,6 +16,8 @@ void print_number(int n)
 		ones *= -1;
 		_putchar('-');
 	}
+	if (copy1 > 0)
+	{
 	while (copy1 / 10)
 	{
 		pv *= 10;
@@ -26,6 +28,7 @@ void print_number(int n)
 		_putchar((copy2 / pv) + '0');
 		copy2 -= (copy2 / pv) * pv;
 		pv = pv / 10;
+	}
 	}
 	_putchar(ones + '0');
 }
