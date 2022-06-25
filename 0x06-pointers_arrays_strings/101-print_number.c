@@ -23,7 +23,7 @@ void print_number(int n)
 	while (pv >= 10)
 	{
 		_putchar((copy2 / pv) + '0');
-		copy2 = copy2 % pv;
+		copy2 -= (copy2 / pv) * pv;
 		pv = pv / 10;
 	}
 	_putchar(copy2 + '0');
