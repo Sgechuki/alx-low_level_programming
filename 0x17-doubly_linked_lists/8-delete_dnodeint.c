@@ -42,5 +42,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp1->next->prev = temp1->prev;
 	}
 	free(temp1);
-	return (-1);
+	return (1);
 }
