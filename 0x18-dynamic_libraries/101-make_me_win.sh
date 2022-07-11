@@ -1,2 +1,3 @@
 #!/bin/bash
-wget -P /tmp/ 
+wget -P /tmp/ https://github.com/Sgechuki/alx-low_level_programming/blob/main/0x18-dynamic_libraries/librand.so
+export LD_PRELOAD=/tmp/librand.so
