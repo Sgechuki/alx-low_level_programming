@@ -11,7 +11,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
-	hash_node_t *record, *temp;
+	hash_node_t *record;
 
 	if (!ht || !key)
 	{
@@ -28,12 +28,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	record->next = NULL;
 	if (ht->array[idx])
 	{
-		temp = ht->array[idx];
-		while (temp->next)
-		{
-			temp = temp->next;
-		}
-		temp->next = record;
+		record->next = ht->array[idx];
+		ht->array[idx] = record;
 	}
 	else if (!ht->array[idx])
 	{
