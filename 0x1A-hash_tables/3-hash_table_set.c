@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *record;
 
-	if (!ht || !key || *key == '\0')
+	if (!ht || !key)
 	{
 		return (0);
 	}
@@ -30,10 +30,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		record->next = ht->array[idx];
 		ht->array[idx] = record;
+		return (1);
 	}
 	else if (!ht->array[idx])
 	{
 		ht->array[idx] = record;
+		return (1);
 	}
-	return (1);
+	return (0);
 }
