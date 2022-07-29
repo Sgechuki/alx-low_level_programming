@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx;
 	hash_node_t *record;
 
-	if (!ht || !key)
+	if (!ht || !key || *key == '\0')
 	{
 		return (0);
 	}
