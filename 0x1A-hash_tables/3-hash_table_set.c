@@ -11,9 +11,9 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
-	hash_node_t *record;
+	hash_node_t *record, *temp;
 
-	if (!ht || !key)
+	if (!ht || !key || *key == '\0')
 	{
 		return (0);
 	}
@@ -23,11 +23,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-	record->key = (char *)key;
+	record->key = strdup(key);
 	record->value = strdup(value);
 	record->next = NULL;
 	if (ht->array[idx])
 	{
+		temp = ht->array[idx];
+		while (temp)
+		{
+			if (strcmp(temp->key, key) == 0)
+			{
+				temp->value = strdup(value);
+				free(record);
+				return (1);
+			}
+			temp = temp->next;
+		}
 		record->next = ht->array[idx];
 		ht->array[idx] = record;
 		return (1);
