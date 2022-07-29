@@ -8,8 +8,8 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *temp;
-	unsigned long int i;
+	hash_node_t *temp = NULL;
+	unsigned long int i = 0;
 	int started = 0;
 
 	if (!ht)

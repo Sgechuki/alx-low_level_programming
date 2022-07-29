@@ -10,15 +10,13 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx;
-	hash_node_t *record, *temp;
+	unsigned long int idx = 0;
+	hash_node_t *record = NULL, *temp = NULL;
 
 	if (!ht || !key || *key == '\0')
-	{
 		return (0);
-	}
 	idx = key_index((const unsigned char *)key, ht->size);
-	record = malloc(sizeof(hash_node_t *));
+	record = malloc(sizeof(hash_node_t));
 	if (record == NULL)
 	{
 		return (0);
@@ -33,7 +31,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(temp->key, key) == 0)
 			{
+				free(temp->value);
 				temp->value = strdup(value);
+				free(record->key);
+				free(record->value);
 				free(record);
 				return (1);
 			}
