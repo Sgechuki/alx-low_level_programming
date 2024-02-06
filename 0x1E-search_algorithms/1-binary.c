@@ -10,51 +10,34 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	int *first;
-	int *last;
-	int mid;
-	int pos;
+	size_t i, first, last;
 
+	first = 0;
+	last = size - 1;
 	if (array == NULL)
 		return (-1);
-	pos = (int) size - 1;
-	first = array;
-	mid = pos / 2;
-	last = array + pos;
-	while (array[mid] >= *first && array[mid] <= *last)
+	
+	for (first = 0, last = size - 1; first <= last;)
 	{
 		printf("Searching in array:");
-		print_arr(first, last);
-		if (value == array[mid])
-			return (mid);
-		else if (value < array[mid])
+		for (i = first; i < last; i++)
 		{
-			last = array + (mid - 1);
-			mid = mid / 2;
+			printf(" %d,", array[i]);
+		}
+		printf(" %d\n", array[i]);
+		i = first + ((last - first) / 2);
+		if (array[i] == value)
+		{
+			return (i);
+		}
+		else if (value < array[i])
+		{
+			last = i - 1;
 		}
 		else
 		{
-			first = array + (mid + 1);
-			mid = (mid + 1) + ((pos - (mid + 1)) / 2);
+			first = i + 1;
 		}
 	}
 	return (-1);
-}
-
-/**
- * print_arr - prints all elements in array
- * @first: pointer to first element
- * @last: pointer to last element
- *
- */
-void print_arr(int *first, int *last)
-{
-	int i = 0;
-
-	while ((first + i) < last)
-	{
-		printf(" %d,", *(first + i));
-		i++;
-	}
-	printf(" %d\n", *last);
 }
