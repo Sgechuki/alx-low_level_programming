@@ -15,7 +15,7 @@ int jump_search(int *array, size_t size, int value)
 	int i;
 	int j;
 
-	if (array == NULL)
+	if (array == NULL || size <= 0)
 		return (-1);
 	i = (int) sqrt(size);
 	j = 0;
